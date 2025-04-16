@@ -1,4 +1,5 @@
 import { Button, Layout, Menu } from "antd";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const { Header } = Layout;
@@ -33,9 +34,11 @@ export default function ClushHeader() {
         items={items}
         style={{ flex: 1, minWidth: 0 }}
       />
-      <Button color="primary" variant="solid" size="large">
-        로그인
-      </Button>
+      <Link to={"/login"}>
+        <Button color="primary" variant="solid" size="large">
+          로그인
+        </Button>
+      </Link>
     </CHeader>
   );
 }

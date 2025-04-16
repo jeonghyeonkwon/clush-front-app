@@ -1,15 +1,18 @@
 import React from "react";
 import ClushLayout from "./layouts/ClushLayout";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import SignUpContainer from "./containers/SignUpContainer";
 
 const App: React.FC = () => {
   return (
     <ClushLayout>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-        iure quia officia voluptatem, laudantium obcaecati, aspernatur doloribus
-        delectus deleniti numquam facere impedit odio perferendis, repellendus
-        rem error nemo aperiam ducimus.
-      </p>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<SignUpContainer />} />
+      </Routes>
     </ClushLayout>
   );
 };
